@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Group{% endblock title %}
+{% block content %}
+
+<div class="search-box mb-4">
+    <form method="get" action="{% url 'group_list' %}" class="d-flex">
+        <input 
+            type="text" 
+            name="q" 
+            class="form-control me-2" 
+            placeholder="Search for groups..." 
+            value="{{ request.GET.q }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+    <h1>Group List</h1>
+    <a href="{% url 'group_create' %}">Create New Group</a>
+    <ul>
+        {% for group in groups %}
+        <li>
+            <a href="{{ group.get_absolute_url }}">{{ group.name }}</a>
+            <a href="{% url 'group_detail' group.id %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock content %}
+

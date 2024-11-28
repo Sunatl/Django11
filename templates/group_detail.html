@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ group.name }}</title>
+    <link rel="stylesheet" href="{% static "main2.css" %}">
+
+</head>
+<body>
+    <h1>Group: {{ group.name }}</h1>
+    <p><strong>Date:</strong> {{ group.date }}</p>
+    <p><strong>Active:</strong> {{ group.is_active }}</p>
+    <a href="{% url 'group_update' group.id %}">Edit</a>
+    <a href="{% url 'group_delete' group.id %}">Delete</a>
+    <a href="{% url 'group_list' %}">Back to List</a>
+</body>
+</html>

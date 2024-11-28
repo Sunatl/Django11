@@ -1,0 +1,78 @@
+/* main1112.css */
+/* Background and Container Styling */
+body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Soft blue gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+.ss2211{
+    display: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer shadow for a floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Body */
+.card-body h2 {
+    color: #4caf50;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-body p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.btn-primary {
+    background: #4285f4;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #3367d6;
+    transform: scale(1.05);
+}
+
+.btn-lg {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 30px;
+}

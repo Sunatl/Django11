@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Attendance{% endblock title %}
+{% block content %}
+    <h1>Attendance List</h1>
+    <a href="{% url 'attendance_create' %}">Create New Record</a>
+    <ul>
+        {% for attendance in attendances %}
+        <li>
+            <a href="{{ attendance.get_absolute_url }}">{{ attendance.student.f_name }} {{ attendance.student.l_name }}</a>
+
+            <a href="{% url 'attendance_detail' attendance.id %}">Detail</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

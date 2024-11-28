@@ -1,0 +1,83 @@
+/* main1113.css */
+.ss2211{
+    display: none;
+}
+/* Background Styling */
+body {
+    background: linear-gradient(135deg, #e8f0fe, #d0e1f9); /* Soft gradient for a calm background */
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 2rem;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+}
+
+form .form-control {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.me-2 {
+    margin-right: 10px;
+}

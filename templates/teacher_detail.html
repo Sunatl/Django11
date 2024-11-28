@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ teacher.f_name }} {{ teacher.l_name }}</title>
+    <link rel="stylesheet" href="{% static "main2.css" %}">
+
+</head>
+<body>
+    <h1>Teacher Details: {{ teacher.f_name }} {{ teacher.l_name }}</h1>
+    <p><strong>Email:</strong> {{ teacher.email }}</p>
+    <p><strong>Phone:</strong> {{ teacher.phone }}</p>
+    <p><strong>Subject:</strong> {{ teacher.subject }}</p>
+    <p><strong>Groups:</strong></p>
+    <ul>
+        {% for group in teacher.group.all %}
+        <li>{{ group.name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'teacher_update' teacher.id %}">Edit</a>
+    <a href="{% url 'teacher_delete' teacher.id %}">Delete</a>
+    <a href="{% url 'teacher_list' %}">Back to List</a>
+</body>
+</html>

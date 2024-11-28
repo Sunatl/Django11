@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attendance Details</title>
+        <link rel="stylesheet" href="{% static "main2.css" %}">
+
+    </head>
+    <body>
+        <h1>Attendance Details</h1>
+        <p><strong>Student:</strong> {{ attendance.student.f_name }} {{ attendance.student.l_name }}</p>
+        <p><strong>Arrival Time:</strong> {{ attendance.omadan }}</p>
+        <p><strong>Departure Time:</strong> {{ attendance.raftan }}</p>
+        <p><strong>Remarks:</strong> {{ attendance.der_mekunam }}</p>
+        <p><strong>Notes:</strong> {{ attendance.nameoyam }}</p>
+        <a href="{% url 'attendance_update' attendance.id %}">Edit</a>
+        <a href="{% url 'attendance_delete' attendance.id %}">Delete</a>
+        <a href="{% url 'attendance_list' %}">Back to List</a>
+    </body>
+    </html>
+    

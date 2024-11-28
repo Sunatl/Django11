@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Attendance Record</title>
+    <link rel="stylesheet" href="{% static "main1.css" %}">
+
+</head>
+<body>
+    <h1>Are you sure you want to delete the record for "{{ attendance.student.f_name }} {{ attendance.student.l_name }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <a href="{% url 'attendance_list' %}">Cancel</a>
+</body>
+</html>

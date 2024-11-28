@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "main.css" %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <header class="ss2211">
+        <div class="menu-header">
+            <h1 class="menu-title">Attandance</h1>
+            <a href="{% url 'base' %}" class="menu-link">Menu</a>
+            <a href="{% url 'group_list' %}" class="menu-link">Group</a>
+            <a href="{% url 'student_list' %}" class="menu-link">Student</a>
+            <a href="{% url 'teacher_list' %}" class="menu-link">Teacher</a>
+            <a href="{% url 'attendance_list' %}" class="menu-link">Attendance</a>
+            <a href="{% url 'logout' %}" class="menu-link">Logout</a> 
+        </div>
+    </header>
+    {% block content %}
+
+<div class="menu-content">
+    <div class="menu-description">
+        <h2 class="welcome">Welcome to Our Attandance</h2>
+        <p>This platform allows you to manage and track all your essential tasks with ease. Whether you're organizing team projects or monitoring employee performance, our tools are designed to improve your productivity and streamline operations.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <h3 class="footer-title">Thank You for Choosing Us</h3>
+    <p class="footer-info">Explore all our features and enjoy the benefits of a well-organized workspace. If you need assistance, don't hesitate to reach out. We're here to help!</p>
+</div>
+
+
+{% endblock content %}
+
+</body>
+</html>

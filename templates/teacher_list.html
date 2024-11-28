@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Teacher{% endblock title %}
+{% block content %}
+    <h1>Teacher List</h1>
+    <a href="{% url 'teacher_create' %}">Create New Teacher</a>
+    <ul>
+        {% for teacher in teachers %}
+        <li>
+            <a href="{{ teacher.get_absolute_url }}">{{ teacher.f_name }} {{ teacher.l_name }}</a>
+            <a href="{% url 'teacher_detail' teacher.id %}">Detail</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock content %}
+
